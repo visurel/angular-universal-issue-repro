@@ -5,6 +5,7 @@
   "projects": {
     "ng-universal-demo": {
       "root": "",
+      "sourceRoot": "src",
       "projectType": "application",
       "architect": {
         "build": {
@@ -96,7 +97,7 @@
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
-          "options": {            
+          "options": {
             "tsConfig": [
               "src/tsconfig.app.json"
             ],
@@ -150,6 +151,7 @@
       }
     }
   },
+  "defaultProject": "ng-universal-demo",
   "cli": {},
   "schematics": {
     "@schematics/angular:class": {
@@ -157,8 +159,8 @@
     },
     "@schematics/angular:component": {
       "spec": false,
-      "inlineStyle": true,
-      "inlineTemplate": true,
+      "inlineStyle": false,
+      "inlineTemplate": false,
       "prefix": "app",
       "styleext": "css"
     },
